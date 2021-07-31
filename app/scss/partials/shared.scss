@@ -1,0 +1,30 @@
+.main-container {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $spacing_desk;
+}
+
+.section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.img-basic {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@include media-xs {
+  .main-container {
+    padding: 0 $spacing_mob;
+  }
+}
+
+@include media-md {
+  .main-container {
+    padding: 0 $spacing_desk;
+  }
+}
+

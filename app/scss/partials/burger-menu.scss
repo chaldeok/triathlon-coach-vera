@@ -1,0 +1,114 @@
+/*
+.main-menu__list {
+  padding: 0;
+}
+
+.main-menu__item {
+  display: inline-block;
+  &:not(&:last-child) {
+    margin-right: 2.5rem;
+  }
+}
+
+.main-menu__link {
+  display: inline-block;
+  position: relative;
+  padding: .625rem;
+  color: whitesmoke;
+  transition: color .23s ease-out;
+
+  &:hover {
+    color: darken(white, 55%);
+  }
+}
+
+@include media-1023 {
+  .main-menu__body {
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: orange;
+    overflow: auto;
+    padding-top: 5rem;
+    z-index: -1;
+    transform: translateY(-100%);
+
+    &.burger-menu--active {
+      visibility: visible;
+      transform: translateY(0);
+      transition: all .23s ease-out;
+    }
+  }
+
+  .main-menu__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:not(&:last-child) {
+      margin-right: 0;
+    }
+    margin-bottom: 4rem;
+  }
+
+  .main-menu__link {
+    font-size: 1.5rem;
+  }
+
+  .burger-menu__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 100;
+  }
+
+  .burger-menu__lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .burger-menu__lines,
+  .burger-menu__lines::before,
+  .burger-menu__lines::after {
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    background-color: white;
+  }
+
+  .burger-menu__lines::before,
+  .burger-menu__lines::after {
+    content: '';
+    transition: all .2s ease-out;
+  }
+
+  .burger-menu__lines::before {
+    top: -10px;
+  }
+  .burger-menu__lines::after {
+    top: 10px;
+  }
+  .burger-menu__button--active .burger-menu__lines {
+    background-color: transparent;
+  }
+
+  .burger-menu__button--active .burger-menu__lines::before {
+    top: 0;
+    transform: rotate(45deg);
+    background-color: whitesmoke;
+  }
+
+  .burger-menu__button--active .burger-menu__lines::after {
+    top: 0;
+    transform: rotate(-45deg);
+    background-color: whitesmoke;
+  }
+}
+*/

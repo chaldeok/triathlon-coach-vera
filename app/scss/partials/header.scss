@@ -1,0 +1,271 @@
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  height: 3.75rem;
+  font-family: $font-text-regular;
+  font-size: 14px;
+  background-color: black;
+}
+
+.header-inner__left,
+.header-inner__mid,
+.header-inner__right {
+  display: flex;
+  align-items: center;
+}
+
+.phone-link {
+  color: $color-secondary;
+  font-family: $font-title-bold;
+  margin-right: 20px;
+}
+
+
+@include media-xs {
+  .main-container--header {
+    padding: 0;
+  }
+
+  .header-inner {
+    justify-content: space-around;
+    font-size: 12px;
+  }
+
+  .social-link--whatsup,
+  .social-link--telegram,
+  .social-link--insta {
+    margin-right: 15px;
+  }
+
+  /* burger menu */
+  .main-menu__list {
+    padding: 0;
+  }
+
+  .main-menu__item {
+    display: inline-block;
+    &:not(&:last-child) {
+      margin-right: 2.5rem;
+    }
+  }
+
+  .main-menu__link {
+    display: inline-block;
+    position: relative;
+    padding: .625rem;
+    color: whitesmoke;
+    transition: color .4s ease-out;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  .main-menu__body {
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: orange;
+    overflow: auto;
+    padding-top: 5rem;
+    z-index: -1;
+    transform: translateY(-100%);
+
+    &.burger-menu--active {
+      visibility: visible;
+      transform: translateY(0);
+      transition: all .23s ease-out;
+    }
+  }
+
+  .main-menu__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:not(&:last-child) {
+      margin-right: 0;
+    }
+    margin-bottom: 4rem;
+  }
+
+  .main-menu__link {
+    font-size: 1.5rem;
+  }
+
+  .burger-menu__button {
+    position: absolute;
+    left: 11%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 100;
+  }
+
+  .burger-menu__lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .burger-menu__lines,
+  .burger-menu__lines::before,
+  .burger-menu__lines::after {
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    background-color: white;
+  }
+
+  .burger-menu__lines::before,
+  .burger-menu__lines::after {
+    content: '';
+    transition: all .2s ease-out;
+  }
+
+  .burger-menu__lines::before {
+    top: -10px;
+  }
+  .burger-menu__lines::after {
+    top: 10px;
+  }
+  .burger-menu__button--active .burger-menu__lines {
+    background-color: transparent;
+  }
+
+  .burger-menu__button--active .burger-menu__lines::before {
+    top: 0;
+    transform: rotate(45deg);
+    background-color: whitesmoke;
+  }
+
+  .burger-menu__button--active .burger-menu__lines::after {
+    top: 0;
+    transform: rotate(-45deg);
+    background-color: whitesmoke;
+  }
+}
+
+@include media-sm {
+  .header-inner {
+    font-size: 14px;
+  }
+
+  .header-inner__left {
+    order: 3;
+  }
+
+  .header-inner__mid {
+    order: 1;
+  }
+
+  .header-inner__right {
+    order: 2;
+  }
+  .phone-link,
+  .social-link--whatsup,
+  .social-link--insta {
+    margin-right: 20px;
+  }
+
+  .social-link--insta {
+    order: 1;
+  }
+  .social-link--fb {
+    order: 2;
+  }
+}
+
+@include media-lg {
+  .header-inner__left {
+    order: 1;
+  }
+
+  .header-inner__mid {
+    order: 2;
+  }
+
+  .header-inner__right {
+    order: 3;
+  }
+
+  .social-link--fb {
+    order: 1;
+    margin-right: 20px;
+  }
+
+  .social-link--insta {
+    order: 2;
+    margin-right: 0;
+  }
+
+  .social-link--telegram {
+    margin-right: 0;
+  }
+
+  /* burger menu */
+  .burger-menu__button {
+    display: none;
+  }
+
+  .main-menu__body {
+    position: relative;
+    visibility: visible;
+    padding-top: 0;
+    width: 100%;
+    background-color: unset;
+    transform: unset;
+    z-index: unset;
+  }
+
+  .main-menu__list {
+    display: flex;
+    margin: 0;
+  }
+
+  .main-menu__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(&:last-child) {
+      margin-right: 20px;
+    }
+    margin-bottom: 0;
+  }
+
+  .main-menu__link {
+    position: relative;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      height: 4px;
+      width: 77%;
+      background-color: $color-accent;
+      opacity: 0;
+      transform: translateX(-50%);
+
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        top: 90%;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+
+/* burger menu */
+

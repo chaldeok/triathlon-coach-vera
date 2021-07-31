@@ -1,0 +1,89 @@
+//mobile first
+$screen-xs: 320px;   // телефоны с портретной ориентацией, менее 576px
+$screen-sm: 576px;   // телефоны с горизонтальной ориентацией, 576px и выше
+$screen-md: 768px;   // планшеты, 768px и выше
+$screen-lg: 992px;   // настольные компьютеры, 992px и выше
+$screen-xl: 1200px;  // большие настольные компьютеры, 1200px и выше
+$screen-xxl: 1400px; // очень большие настольные компьютеры, 1400px и выше
+
+// from 320px to 575px
+@mixin media-xs {
+  @media screen and (min-width: $screen-xs) {
+    @content
+  }
+}
+// from 576px to 767px
+@mixin media-sm {
+  @media screen and (min-width: $screen-sm) {
+    @content
+  }
+}
+// from 768px to 991px
+@mixin media-md {
+  @media screen and (min-width: $screen-md) {
+    @content
+  }
+}
+// from 992px to 1199px
+@mixin media-lg {
+  @media screen and (min-width: $screen-lg) {
+    @content
+  }
+}
+// from 1200px to 1399px
+@mixin media-xl {
+  @media screen and (min-width: $screen-xl) {
+    @content
+  }
+}
+// from 1400 and above
+@mixin media-xxl {
+  @media screen and (min-width: $screen-xxl) {
+    @content
+  }
+}
+
+// desktop first
+/*$screen-1400: 1400px; // очень большие настольные компьютеры, 1400px и выше
+$screen-1399: 1399px; // большие настольные компьютеры 1200 - 1399
+$screen-1199: 1199px; // большие настрольные компьютеры 1024 - 1199
+$screen-1023: 1023px; // настольные компьютеры и планшены 768 - 1023
+$screen-767: 767px; // планшеты и очень большие телефоны 414 - 767
+$screen-413: 413px; // телефоны до 413px
+
+// from 1400 and above
+@mixin media-1400 {
+  @media screen and (min-width: $screen-1400) {
+    @content
+  }
+}
+// from 1200 to 1399
+@mixin media-1399 {
+  @media screen and (max-width: $screen-1199) {
+    @content
+  }
+}
+// from 1024px to 1199px
+@mixin media-1199 {
+  @media screen and (max-width: $screen-1199) {
+    @content
+  }
+}
+// from 768px to 1023px
+@mixin media-1023 {
+  @media screen and (max-width: $screen-1023) {
+    @content
+  }
+}
+// from 414px to 767px
+@mixin media-767 {
+  @media screen and (max-width: $screen-767) {
+    @content
+  }
+}
+// from 320px to 413px
+@mixin media-413 {
+  @media screen and (max-width: $screen-413) {
+    @content
+  }
+}*/
